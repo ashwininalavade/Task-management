@@ -13,6 +13,7 @@ import { ConfigSchemaValidation } from './config.schema';
     ConfigModule.forRoot({
       envFilePath: [`.env.stage.${process.env.STAGE}`],
       validationSchema: ConfigSchemaValidation,
+      isGlobal: true
     }),
     TasksModule,
     TypeOrmModule.forRootAsync({
